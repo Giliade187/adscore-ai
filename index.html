@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdScore AI - Auditoria de Performance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: '#FFFFFF',
+              surface: '#F8FAFC',
+              border: '#E2E8F0',
+              primary: '#0F172A',
+            },
+            boxShadow: {
+              '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.1)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body { background-color: #FFFFFF; color: #0F172A; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease; }
+        .dark body { background-color: #0F172A; color: #FFFFFF; }
+        
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: #E2E8F0; border-radius: 10px; }
+        .dark ::-webkit-scrollbar-thumb { background: #1E293B; }
+        
+        .radius-sm { border-radius: 4px; }
+        .radius-md { border-radius: 12px; }
+        .page-transition { animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        
+        @media print {
+            nav, header, footer, button, .no-print { display: none !important; }
+            .ml-64 { margin-left: 0 !important; }
+            body { background: white !important; color: black !important; }
+            .max-w-[1400px] { max-width: 100% !important; padding: 0 !important; width: 100% !important; }
+            .shadow-3xl, .shadow-xl, .shadow-sm { box-shadow: none !important; border: 1px solid #E2E8F0 !important; }
+            .bg-slate-900 { background-color: #0F172A !important; -webkit-print-color-adjust: exact; }
+            .text-emerald-400 { color: #10B981 !important; -webkit-print-color-adjust: exact; }
+            .page-transition { animation: none !important; }
+            canvas, img { break-inside: avoid; }
+        }
+
+        .perspective-1000 { perspective: 1000px; }
+        .rotate-y-3 { transform: rotateY(3deg) rotateX(2deg); }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
