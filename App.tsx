@@ -1,13 +1,13 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { HashRouter, Routes, Route, Link, useNavigate, useParams, Navigate, useLocation } from 'react-router-dom';
 import { 
   LayoutDashboard, PlusCircle, History, ChevronRight, Upload, X,
   Loader2, Sparkles, BrainCircuit, Zap, 
-  Video, Download, ShieldCheck, 
-  ArrowRight, Activity, Target, PieChart, CheckCircle2, AlertOctagon, XCircle, Printer,
-  Save, ChevronLeft, Check, Moon, Sun, Shield, AlertTriangle, MousePointer2, 
-  Layers, Gauge, Eye, Smartphone, MessageSquare, CheckSquare, LogOut, Mail, Lock, User as UserIcon, CreditCard, RefreshCw
+  ShieldCheck, 
+  ArrowRight, Activity, Target, AlertOctagon, XCircle, Printer,
+  ChevronLeft, Moon, Sun, Shield, AlertTriangle, 
+  LogOut, Mail, Lock, User as UserIcon, CreditCard, RefreshCw
 } from 'lucide-react';
 import { db } from './db';
 import { analyzeCreative } from './gemini';

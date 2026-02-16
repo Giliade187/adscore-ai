@@ -35,7 +35,7 @@ async function getAvailableModel(): Promise<string> {
       m.supportedGenerationMethods?.includes('generateContent')
     );
     if (flashVariant) {
-      cachedModel = flashVariant.name.replace('models/', '');
+      cachedModel = flashVariant.name?.replace('models/', '') || 'gemini-1.5-flash-001';
       console.log(`✅ Using model: ${cachedModel}`);
       return cachedModel;
     }
@@ -45,7 +45,7 @@ async function getAvailableModel(): Promise<string> {
       m.supportedGenerationMethods?.includes('generateContent')
     );
     if (firstAvailable) {
-      cachedModel = firstAvailable.name.replace('models/', '');
+      cachedModel = firstAvailable.name?.replace('models/', '') || 'gemini-1.5-flash-001';
       console.log(`✅ Using model: ${cachedModel}`);
       return cachedModel;
     }
